@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wisata Pantai Anyer</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<header style="z-index: 2; width:100%;box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.1); border-top: 5px solid #1687A8;">
+		<div class="container">
+			<nav>
+				<h1><a href="index.html" class="judul"></a></h1>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="artikel.html">ARTIKEL</a></li>
+					<li><a href="galery.html">GALERY</a></li>
+					<li class="active"><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</nav>
+		</div>
+  </header>
+  
+  <div class="daftar">
+    <form action="contact.html" method="GET"><br><br>
+      <h4 align="center">Apabila ada kritik dan saran silahkan isi form dibawah ini</h4><br>
+      <div class="form-modal">
+        <div class="form-header">
+          Kritik & Saran
+        </div>
+        <div class="form-body" style="text-align: left;">
+          <label>Nama Lengkap</label><br>
+          <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama lengkap" required="required"><br>
+
+          <label>Email</label><br>
+          <input type="text" id="email" name="nama" class="form-control" placeholder="Email anda" required="required"><br>
+
+          <label>Pesan</label><br>
+          <textarea name="alamat" id="pesan" cols="5" rows="5" class="form-control" placeholder="Pesan anda" required="required"></textarea>
+
+          <input type="submit" class="btn-submit" value="Kirim">
+        </div>
+      </div>
+    </form>
+  </div>  
+
+
+
+  <footer style="background-color: #1687A8;color: #fff; box-shadow: 0px -2px 2px rgba(0,0,0,0.2);">
+		<div class="container">
+      <small style="letter-spacing: 3px;">Made by Hairul Anwar</small>
+      </div>
+  </footer>
+  
+
+  <script>
+    const nama = document.getElementById("nama").nodeValue;
+    const email = document.getElementById("email").nodeValue;
+    const pesan = document.getElementById("pesan").nodeValue;
+    const btn = document.querySelector(".btn-submit");
+
+    btn.addEventListener("click",function(){
+      if(nama!="" && email!="" && pesan!=""){
+        alert("Terimakasih atas tanggapan anda :)");
+      }
+      else{
+        alert("Form harus diisi semua");
+      }
+    });
+  </script>
+</body>
+</html>
